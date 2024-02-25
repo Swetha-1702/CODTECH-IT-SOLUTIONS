@@ -8,7 +8,7 @@ public class Calculator {
 		double total = 0;
 		Scanner input = new Scanner(System.in);
 		total = doCalculator(input, total);
-		System.out.println("The total value..." + total);
+		System.out.println("The total value.." + total);
 
 	}
 

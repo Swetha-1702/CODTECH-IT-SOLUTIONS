@@ -76,11 +76,11 @@ class GradeManagementSystem {
     public GradeManagementSystem() {
         students = new ArrayList<>();
     }
-
+   // adding student details in array list
     public void addStudent(String name, int rollNumber, int tamilMark, int englishMark, int mathematicsMark, int scienceMark, int socialScienceMark) {
         students.add(new Student(name, rollNumber, tamilMark, englishMark, mathematicsMark, scienceMark, socialScienceMark));
     }
-
+ // update student details in array list
     public void updateStudent(int rollNumber, int tamilMark, int englishMark, int mathematicsMark, int scienceMark, int socialScienceMark) {
         for (Student student : students) {
             if (student.getRollNumber() == rollNumber) {
@@ -94,7 +94,7 @@ class GradeManagementSystem {
         }
         System.out.println("Student with roll number " + rollNumber + " not found!");
     }
-
+ // delete student details in array list
     public void deleteStudent(int rollNumber) {
         for (int i = 0; i < students.size(); i++) {
             if (students.get(i).getRollNumber() == rollNumber) {
@@ -105,7 +105,7 @@ class GradeManagementSystem {
         }
         System.out.println("Student with roll number " + rollNumber + " not found.");
     }
-
+// display student details from array list
     public void displayStudentDetails(int rollNumber) {
         for (Student student : students) {
             if (student.getRollNumber() == rollNumber) {
@@ -123,12 +123,12 @@ class GradeManagementSystem {
         }
         System.out.println("Student with roll number " + rollNumber + " not found.");
     }
-
+// percentage calculation
     private double calculatePercentage(Student student) {
         int totalMarks = student.getTamilMark() + student.getEnglishMark() + student.getMathematicsMark() + student.getScienceMark() + student.getSocialScienceMark();
         return (double) totalMarks / 5;
     }
-
+// grade calculation
     private char calculateGrade(Student student) {
         double percentage = calculatePercentage(student);
         if (percentage >= 90) {
@@ -162,6 +162,7 @@ public class StudentGradeManagementSystem {
             scanner.nextLine(); // Consume newline
 
             switch (choice) {
+            // Adding Student details
                 case 1:
                     System.out.println("Adding Student:");
                     System.out.print("Enter student name: ");
@@ -181,6 +182,7 @@ public class StudentGradeManagementSystem {
                     gradeManagementSystem.addStudent(name, rollNumber, tamilMark, englishMark, mathematicsMark, scienceMark, socialScienceMark);
                     System.out.println("Student added successfully!");
                     break;
+                    // Updating Student details
                 case 2:
                     System.out.println("Updating Student:");
                     System.out.print("Enter roll number of student to update: ");
@@ -198,18 +200,21 @@ public class StudentGradeManagementSystem {
                     gradeManagementSystem.updateStudent(updateRollNumber, updateTamilMark, updateEnglishMark, updateMathematicsMark, updateScienceMark, updateSocialScienceMark);
                     System.out.println("Student details updated successfully!");
                     break;
+                    // Deleting Student details
                 case 3:
                     System.out.println("Deleting Student:");
                     System.out.print("Enter roll number of student to delete: ");
                     int deleteRollNumber = scanner.nextInt();
                     gradeManagementSystem.deleteStudent(deleteRollNumber);
                     break;
+                    // Displaying Student details
                 case 4:
                     System.out.println("Displaying Student Details:");
                     System.out.print("Enter roll number of student to display details: ");
                     int displayRollNumber = scanner.nextInt();
                     gradeManagementSystem.displayStudentDetails(displayRollNumber);
                     break;
+                    // Exit
                 case 5:
                     System.out.println("Exiting...");
                     System.exit(0);

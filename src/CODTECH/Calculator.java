@@ -8,7 +8,7 @@ public class Calculator {
 		double total = 0;
 		Scanner input = new Scanner(System.in);
 		total = doCalculator(input, total);
-		System.out.println("The total value.." + total);
+		System.out.println("The total value is = " + total);
 
 	}
 
@@ -50,7 +50,7 @@ public class Calculator {
 				num1 = input.nextDouble();
 				// after getting inputs now calling cal method for mathematical operation
 				total = cal(num, ch, num1);
-				System.out.println("total is" + total);
+				System.out.println("total is..." + total);
 				count++;
 
 			} 

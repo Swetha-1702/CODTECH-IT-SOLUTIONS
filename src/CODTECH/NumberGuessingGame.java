@@ -6,7 +6,7 @@ public class NumberGuessingGame {
 	        Scanner scanner = new Scanner(System.in);
 	        Random random = new Random();
 	        
-	        int numberToGuess = random.nextInt(100) + 1; // Generates a random number between 1 and 100
+	        int numberToGuess = random.nextInt(100) + 1; // Generates a random number between 1 and 100..
 	        int attempts = 0;
 	        final int MAX_ATTEMPTS = 10; // Maximum number of attempts
 	        
@@ -22,9 +22,9 @@ public class NumberGuessingGame {
 	                System.out.println("Congratulations! You've guessed the number " + numberToGuess + " correctly in " + attempts + " attempts.");
 	                break;
 	            } else if (guess < numberToGuess) {
-	                System.out.println("Too low! Try again.");
+	                System.out.println("Too low! Try again...");
 	            } else {
-	                System.out.println("Too high! Try again.");
+	                System.out.println("Too high! Try again...");
 	            }
 	        }
 

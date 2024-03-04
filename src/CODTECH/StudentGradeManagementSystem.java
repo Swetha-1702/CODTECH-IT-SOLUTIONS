@@ -92,7 +92,7 @@ class GradeManagementSystem {
                 return;
             }
         }
-        System.out.println("Student with roll number " + rollNumber + " not found.");
+        System.out.println("Student with roll number " + rollNumber + " not found!");
     }
 
     public void deleteStudent(int rollNumber) {
